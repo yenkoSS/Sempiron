@@ -739,6 +739,59 @@ iframe {
 
 /* ----- CONTACT END ----- */
 
+/* ----- FOOTER ----- */
+
+footer {
+  background-color: black;
+  padding: 5rem 0rem;
+}
+
+.icon-footer {
+  width: 25rem;
+  height: auto;
+}
+
+.text-footer-quick-details {
+  color: white;
+  font-size: 18px;
+}
+
+.title-footer {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  border-bottom: 4px solid var(--color-red);
+  padding-bottom: 5px;
+  width: fit-content;
+}
+
+.nav-footer-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-footer-link {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.nav-footer-link-social {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+blockquote {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ----- FOOTER END ----- */
+
 /* ----- LEGAL DOCUMENTS ----- */
 
 .title-legal-document {

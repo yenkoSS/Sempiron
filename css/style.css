@@ -185,7 +185,7 @@ p {
   font-weight: 600;
 }
 
-.title-services {
+h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
@@ -193,7 +193,7 @@ p {
   position: relative;
 }
 
-.title-services span {
+h2 span {
   color: var(--color-blue);
   background-color: white;
   padding: 2px 5px;
@@ -201,7 +201,7 @@ p {
   font-size: 3rem;
 }
 
-.title-services::after {
+h2::after {
   position: absolute;
   content: "";
   display: block;
@@ -510,7 +510,7 @@ header {
   transition: 200ms ease-in-out;
 }
 
-.card-services:hover .title-services::after {
+.card-services:hover h2::after {
   width: 100%;
   transition: 200ms ease-in;
 }
@@ -583,7 +583,7 @@ header {
   transition: 200ms ease-in-out;
 }
 
-.card-services-itp:hover .title-services::after {
+.card-services-itp:hover h2::after {
   width: 100%;
   transition: 200ms ease-in;
 }

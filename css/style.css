@@ -111,9 +111,11 @@ h1 {
 
 h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 700;
   color: var(--color-dark-grey);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 h3::after {
@@ -125,7 +127,7 @@ h3::after {
 }
 
 h3 span {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .h3-span1 {
   color: var(--color-red);
@@ -195,7 +197,7 @@ p {
 }
 
 .text-subtitle {
-  font-size: 2.6rem;
+  font-size: 23px;
   color: var(--color-dark-grey-light);
   font-weight: 600;
   display: flex;
@@ -222,7 +224,7 @@ p {
 
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.5rem;
+  font-size: 23px;
   font-weight: 600;
   color: var(--color-dark-grey);
   position: relative;
@@ -295,6 +297,7 @@ header {
   background-image: linear-gradient(to bottom, rgba(37, 37, 37, 0.61), #000000a8), url(../img/HEADER\ SEMPIRON.jpg);
   /*clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 99%, 0 100%);*/
   background-attachment: fixed;
+  min-height: 950px;
 }
 
 .container {
@@ -304,15 +307,31 @@ header {
 
 .quick-contact-bar {
   background-color: var(--color-red);
-  padding: 2rem 4rem;
+  padding: 15px 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  animation: showQuickBar 900ms;
+  background: linear-gradient(to bottom, var(--color-red2), var(--color-red));
+}
+
+.quick-contact-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.6rem;
-  animation: showQuickBar 900ms;
+  gap: 1.3rem;
 }
 
 .icon-quick-bar {
+  width: 25px;
+  height: auto;
+  padding: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.icon-social-quickbar {
   width: 25px;
   height: auto;
 }
@@ -358,6 +377,7 @@ header {
   top: 0;
   z-index: 2;
   animation: showFixedNav 300ms;
+  transition: 300ms ease-out;
 }
 
 @keyframes showFixedNav {
@@ -851,6 +871,14 @@ header {
 
 /* ----- TESTIMONIALS END ----- */
 
+/* ----- GALLERY ----- */
+
+.section-gallery {
+  background-color: #98d3df2c;
+}
+
+/* ----- GALLERY END ----- */
+
 /* ----- CONTACT ----- */
 
 .section-contact {
@@ -1175,9 +1203,15 @@ table td {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .quick-contact-bar {
     flex-direction: row;
+    gap: 0;
+  }
+
+  .quick-contact-details {
+    flex-direction: row;
+    gap: 4rem;
   }
 
   .icon-logo-header {

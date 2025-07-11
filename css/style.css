@@ -2,7 +2,8 @@
 
 :root {
   --color-dark-grey: #474747;
-  --color-blue: #28c1de;
+  --color-dark-grey-light: #6d6d6d;
+  --color-blue: #03a9f4;
   --color-blue-light: #98d3df;
   --color-red2: #fb2933;
   --color-red: #c8102e;
@@ -44,6 +45,19 @@ h1 {
   font-weight: 400;
   letter-spacing: -1px;
   line-height: 9rem;
+  animation: showh1 700ms;
+}
+
+@keyframes showh1 {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .h1-span1 {
@@ -122,7 +136,8 @@ h3 span {
 }
 
 p {
-  font-size: 16px;
+  font-size: 17px;
+  color: var(--color-dark-grey);
 }
 
 .text-values {
@@ -181,26 +196,47 @@ p {
 
 .text-subtitle {
   font-size: 2.6rem;
-  color: var(--color-blue);
+  color: var(--color-dark-grey-light);
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-subtitle::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-red2);
+}
+
+.text-subtitle-important {
+  font-size: 3.2rem;
+  color: white;
+  font-weight: 600;
+  background-color: var(--color-red2);
+  padding: 1rem 2rem;
 }
 
 h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: white;
+  color: var(--color-dark-grey);
   position: relative;
 }
 
 h2 span {
-  color: var(--color-blue);
-  background-color: white;
+  color: white;
+  background-color: var(--color-blue);
   padding: 2px 5px;
   font-weight: 700;
   font-size: 3rem;
 }
 
+/*
 h2::after {
   position: absolute;
   content: "";
@@ -212,6 +248,8 @@ h2::after {
   margin-top: 10px;
   transition: 300ms ease-in-out;
 }
+
+*/
 
 .text-white {
   color: white;
@@ -271,11 +309,22 @@ header {
   flex-direction: column;
   justify-content: space-between;
   gap: 1.6rem;
+  animation: showQuickBar 900ms;
 }
 
 .icon-quick-bar {
   width: 25px;
   height: auto;
+}
+
+@keyframes showQuickBar {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
 }
 
 .text-quick-contact-bar {
@@ -287,6 +336,17 @@ header {
 .nav-header {
   background-color: black;
   padding: 2rem;
+  animation: showNavHeader 1000ms;
+}
+
+@keyframes showNavHeader {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
 }
 
 .nav-fixed {
@@ -297,6 +357,19 @@ header {
   padding: 2rem;
   top: 0;
   z-index: 2;
+  animation: showFixedNav 300ms;
+}
+
+@keyframes showFixedNav {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .icon-logo-header {
@@ -464,6 +537,8 @@ header {
 
 /* ----- SERVICES ----- */
 
+/*
+
 .card-services {
   background-color: var(--color-red);
   border-radius: 5px;
@@ -478,12 +553,38 @@ header {
   transition: 200ms ease-in;
 }
 
+*/
+
+.card-services {
+  background-color: transparent;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.055);
+  border-radius: 10px;
+  transition: 200ms ease-out;
+}
+
+.card-services:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.089);
+  transition: 100ms ease-in;
+  transition: 100ms ease;
+}
+
+.card-services:hover .icon-services {
+  transform: scale(1.08);
+  transition: 150ms ease-in-out;
+}
+
+/*
+
 .card-services:hover {
   transform: scale(1.01);
   transition: 100ms ease-out;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.685);
 }
-/*
+
 .card-services::before {
   display: block;
   content: "";
@@ -498,7 +599,7 @@ header {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.295);
   transition: 100ms ease-out;
 }
-  */
+  
 
 .card-services:hover .icon-services {
   transform: scale(1.2);
@@ -515,13 +616,15 @@ header {
   transition: 200ms ease-in;
 }
 
-/*
+
 .card-services:hover::before {
   top: 0px;
   right: 0px;
   transition: 100ms ease-in;
 }
-*/
+
+
+
 .icon-services {
   background-color: white;
   padding: 5px;
@@ -530,7 +633,13 @@ header {
   border-radius: 3px;
   transition: 100ms ease-in-out;
 }
+*/
 
+.icon-services {
+  width: 100px;
+  height: auto;
+  transition: 100ms ease-in;
+}
 .box-icon {
   position: relative;
   width: fit-content;
@@ -552,6 +661,7 @@ header {
   transition: 200ms ease-out;
 }
 
+/*
 .card-services-itp {
   background-color: var(--color-red);
   border-radius: 5px;
@@ -618,6 +728,55 @@ header {
   transition: 200ms ease-out;
 }
 
+*/
+
+.card-services-itp {
+  background-color: transparent;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.055);
+  border-radius: 10px;
+  width: 100%;
+  transition: 150ms ease-out;
+}
+
+.card-services-itp:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.089);
+  transition: 100ms ease-in;
+}
+
+.card-services-itp:hover .icon-services-itp {
+  transform: rotate(360deg);
+  transition: 150ms ease-in-out;
+}
+
+.icon-services-itp {
+  width: 100px;
+  height: auto;
+}
+
+.btn-contact {
+  width: fit-content;
+  padding: 1.3rem 2.7rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  color: white;
+  border: none;
+  font-weight: 700;
+  background-color: var(--color-blue);
+  border-radius: 3px;
+  transition: 200ms ease-out;
+}
+
+.btn-contact:hover {
+  transform: translateY(2px);
+  transition: 100ms ease-in;
+}
+
+/*
+
 .btn-contact {
   width: fit-content;
   padding: 1.3rem 2.7rem;
@@ -636,6 +795,8 @@ header {
   transition: 100ms ease-in;
 }
 
+*/
+
 /* ----- SERVICES END ----- */
 
 /* ----- ITP DOCUMENTS ----- */
@@ -652,6 +813,7 @@ header {
 
 .card-testimonial {
   background-color: var(--color-red);
+  background: linear-gradient(var(--color-red2), var(--color-red));
   padding: 3rem;
   border-radius: 3px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.26);
@@ -853,31 +1015,38 @@ table td {
 
 .offset-y1pos {
   transform: translateY(20rem);
+  opacity: 0;
 }
 
 .offset-y2pos {
   transform: translateY(25rem);
+  opacity: 0;
 }
 .offset-y3pos {
   transform: translateY(30rem);
+  opacity: 0;
 }
 
 .offset-y0 {
   transform: translateY(0px);
   transition: 1000ms;
+  opacity: 1;
 }
 
 .offset-x1pos {
   transform: translateX(20rem);
+  opacity: 0;
 }
 
 .offset-x1neg {
   transform: translateX(-20rem);
+  opacity: 0;
 }
 
 .offset-x0 {
   transform: translateX(0px);
   transition: 900ms;
+  opacity: 1;
 }
 
 /* ----- OFFSETS END ----- */

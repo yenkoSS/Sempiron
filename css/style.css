@@ -529,32 +529,45 @@ header {
 
 .nav-header-list-sm {
   background-color: black;
-  width: 100%;
+  width: 80%;
   height: 100vh;
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   display: none;
   position: fixed;
   top: 0;
+  right: 0;
   z-index: 3;
+  animation: navHeaderListSmShow 200ms;
+  padding-top: 30rem;
+}
+
+@keyframes navHeaderListSmShow {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .nav-header-link-sm {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--color-red);
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
 }
 
 .icon-close {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 100px;
+  right: 40px;
   width: 35px;
   height: auto;
 }

@@ -139,6 +139,7 @@ h3 span {
 
 .h3-span3 {
   font-weight: 300;
+  letter-spacing: -1x;
 }
 
 .h3-span1 {
@@ -372,7 +373,7 @@ header {
 
 .nav-header {
   background-color: rgb(48, 48, 48);
-  padding: 2rem;
+  padding: 2rem 6rem;
   animation: showNavHeader 1000ms;
 }
 
@@ -391,7 +392,7 @@ header {
   display: none;
   position: fixed;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 6rem;
   top: 0;
   z-index: 2;
   animation: showFixedNav 300ms;
@@ -412,7 +413,7 @@ header {
 }
 
 .icon-logo-header {
-  width: 15rem;
+  width: 20rem;
   height: auto;
 }
 
@@ -424,7 +425,7 @@ header {
 
 .nav-header-link-lg {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif;
@@ -448,7 +449,7 @@ header {
   background-color: var(--color-red);
   z-index: -1;
   transition: all 100ms ease-in;
-  border-radius: 3px;
+  border-radius: 1px;
 }
 
 .nav-header-link-lg:hover::before {
@@ -458,9 +459,11 @@ header {
 .btn-nav-header {
   padding: 1.3rem 3rem;
   background-color: var(--color-red);
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+
   color: white;
   border: none;
   border-radius: 3px;
@@ -502,11 +505,12 @@ header {
   border: none;
   background-color: var(--color-red);
   color: white;
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
   border-radius: 3px;
   transition: all 100ms ease-in;
+  text-transform: uppercase;
 }
 
 .btn-hero:hover {
@@ -801,14 +805,17 @@ header {
 .btn-contact {
   width: fit-content;
   padding: 1.3rem 2.7rem;
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
   color: white;
   border: none;
   font-weight: 700;
   background-color: var(--color-blue);
   border-radius: 3px;
   transition: 200ms ease-out;
+  letter-spacing: 0.5px;
 }
 
 .btn-contact:hover {
@@ -962,7 +969,7 @@ iframe {
 /* ----- FOOTER ----- */
 
 footer {
-  background-color: black;
+  background-color: rgb(32, 32, 32);
   padding: 5rem 0rem;
 }
 
@@ -1193,10 +1200,10 @@ table td {
   padding: 1.3rem 2.7rem;
   border: none;
   background-color: var(--color-red);
-  font-size: 18px;
+  font-size: 14px;
   color: white;
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   border-radius: 3px;
   transition: 200ms ease-out;
@@ -1245,7 +1252,7 @@ table td {
   }
 
   .icon-logo-header {
-    width: 15rem;
+    width: 25rem;
   }
 
   .card-about {

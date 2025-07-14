@@ -44,7 +44,7 @@ h1 {
   color: white;
   font-weight: 300;
   letter-spacing: -1px;
-  line-height: 9rem;
+  line-height: 7rem;
   animation: showh1 700ms;
 }
 
@@ -63,7 +63,7 @@ h1 {
 .h1-span1 {
   color: var(--color-red);
   font-weight: 700;
-  font-size: 6rem;
+  font-size: 4rem;
   background-color: white;
   padding: 5px 2px;
   border-radius: 3px;
@@ -79,7 +79,7 @@ h1 {
 .h1-span2 {
   color: var(--color-blue);
   font-weight: 700;
-  font-size: 6rem;
+  font-size: 4rem;
   padding: 5px 2px;
   background-color: white;
   border-radius: 3px;
@@ -118,7 +118,7 @@ h1 {
 
 h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 700;
   color: var(--color-dark-grey);
   text-transform: uppercase;
@@ -134,11 +134,12 @@ h3::after {
 }
 
 h3 span {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .h3-span3 {
   font-weight: 300;
+  font-size: 2.7rem;
   letter-spacing: -1x;
 }
 
@@ -175,7 +176,7 @@ p {
 }
 
 .h3-why {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   color: white;
   text-align: center;
@@ -184,7 +185,7 @@ p {
 
 .h3-why span {
   color: var(--color-red);
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .h3-why::after {
   display: block;
@@ -200,7 +201,7 @@ p {
 .text-counter {
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 600;
   display: block;
 }
@@ -208,10 +209,11 @@ p {
 .text-counter span {
   display: block;
   font-size: 18px;
+  font-weight: 300;
 }
 
 .text-subtitle {
-  font-size: 23px;
+  font-size: 19px;
   color: var(--color-dark-grey-light);
   font-weight: 700;
   display: flex;
@@ -231,7 +233,7 @@ p {
 }
 
 .text-subtitle-important {
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: white;
   font-weight: 600;
   background-color: var(--color-red2);
@@ -528,7 +530,7 @@ header {
 }
 
 .nav-header-list-sm {
-  background-color: black;
+  background-color: var(--color-dark-grey);
   width: 80%;
   height: 100vh;
   list-style-type: none;
@@ -542,7 +544,7 @@ header {
   right: 0;
   z-index: 3;
   animation: navHeaderListSmShow 200ms;
-  padding-top: 30rem;
+  padding-top: 20rem;
 }
 
 @keyframes navHeaderListSmShow {
@@ -560,13 +562,14 @@ header {
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 700;
-  color: white;
+  color: var(--color-red2);
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .icon-close {
   position: absolute;
-  bottom: 100px;
+  bottom: 250px;
   right: 40px;
   width: 35px;
   height: auto;
@@ -1245,11 +1248,43 @@ table td {
   }
 
   .h1-span1 {
+    font-size: 6rem;
     padding: 5px 10px;
   }
 
   .h1-span2 {
+    font-size: 6rem;
     padding: 5px 10px;
+  }
+
+  h3 {
+    font-size: 4.5rem;
+  }
+
+  h3 span {
+    font-size: 4rem;
+  }
+
+  .h3-span3 {
+    font-weight: 300;
+    font-size: 4rem;
+    letter-spacing: -1x;
+  }
+
+  .text-subtitle {
+    font-size: 23px;
+  }
+
+  .text-counter {
+    font-size: 6rem;
+  }
+
+  .h3-why {
+    font-size: 3rem;
+  }
+
+  .h3-why span {
+    font-size: 4rem;
   }
 }
 

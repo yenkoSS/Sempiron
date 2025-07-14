@@ -624,17 +624,19 @@ header {
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.055);
   border-radius: 10px;
+
   transition: 200ms ease-out;
 }
 
 .card-services:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.089);
-  transition: 100ms ease-in;
+
   transition: 100ms ease;
 }
 
 .card-services:hover .icon-services {
   transform: scale(1.08);
+
   transition: 150ms ease-in-out;
 }
 
@@ -809,8 +811,8 @@ header {
 }
 
 .card-services-itp:hover .icon-services-itp {
-  transform: rotate(360deg);
-  transition: 150ms ease-in-out;
+  transform: scale(1.1);
+  transition: 600ms ease-in-out;
 }
 
 .icon-services-itp {
@@ -1258,16 +1260,16 @@ table td {
   }
 
   h3 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 
   h3 span {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .h3-span3 {
     font-weight: 300;
-    font-size: 4rem;
+    font-size: 3.5rem;
     letter-spacing: -1x;
   }
 

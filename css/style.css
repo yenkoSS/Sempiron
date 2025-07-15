@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --color-dark-grey: #474747;
@@ -39,11 +39,10 @@ button {
 /* ----- TYPOGRAPHY ----- */
 
 h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 4rem;
   color: white;
   font-weight: 300;
-  letter-spacing: -1px;
   line-height: 7rem;
   animation: showh1 700ms;
 }
@@ -61,12 +60,12 @@ h1 {
 }
 
 .h1-span1 {
-  color: var(--color-red);
-  font-weight: 700;
+  color: var(--color-red2);
+  font-weight: 800;
   font-size: 4rem;
-  background-color: white;
+  /*background-color: white;
   padding: 5px 2px;
-  border-radius: 3px;
+  border-radius: 3px;*/
   text-transform: uppercase;
 }
 
@@ -78,15 +77,16 @@ h1 {
 
 .h1-span2 {
   color: var(--color-blue);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 4rem;
+  /*
   padding: 5px 2px;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 3px;*/
 }
 
 .text-hero {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
   font-size: 2.3rem;
   font-weight: 500;
@@ -101,6 +101,26 @@ h1 {
   align-items: center;
 }
 
+.text-hero-details-special {
+  color: var(--color-blue);
+  font-size: 4rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-hero-details-special::before {
+  display: block;
+  content: "";
+  width: 13px;
+  min-width: 10px;
+  height: 13px;
+  background-color: var(--color-red);
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
 .text-hero-details::before {
   display: block;
   content: "";
@@ -113,7 +133,9 @@ h1 {
 }
 
 .text-hero span {
-  color: var(--color-red);
+  color: var(--color-blue);
+  font-size: 2.5rem;
+  display: block;
 }
 
 h3 {
@@ -208,8 +230,8 @@ p {
 
 .text-counter span {
   display: block;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .text-subtitle {
@@ -320,6 +342,52 @@ header {
   min-height: 950px;
 }
 
+@keyframes pulse2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.text-badge-header {
+  color: white;
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 45px;
+  z-index: 3;
+  text-align: right;
+}
+
+.text-badge-header span {
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+}
+
+.icon-badge-header {
+  width: 10rem;
+  height: auto;
+  border-left: 1px solid rgba(0, 0, 0, 0.11);
+  padding: 10px;
+  z-index: 3;
+}
+
+.background-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  clip-path: polygon(0 0, 24% 0, 0 32%);
+}
 .container {
   padding-right: 20px;
   padding-left: 20px;
@@ -531,7 +599,7 @@ header {
 
 .nav-header-list-sm {
   background-color: var(--color-dark-grey);
-  width: 80%;
+  width: 90%;
   height: 100vh;
   list-style-type: none;
   display: flex;
@@ -569,7 +637,7 @@ header {
 
 .icon-close {
   position: absolute;
-  bottom: 250px;
+  bottom: 170px;
   right: 40px;
   width: 35px;
   height: auto;
@@ -638,6 +706,11 @@ header {
   transform: scale(1.08);
 
   transition: 150ms ease-in-out;
+}
+
+.icon-whyus {
+  width: 3rem;
+  height: auto;
 }
 
 /*
@@ -1288,6 +1361,12 @@ table td {
   .h3-why span {
     font-size: 4rem;
   }
+
+  .text-hero span {
+    color: var(--color-blue);
+    font-size: 3.5rem;
+    display: inline;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1347,6 +1426,7 @@ table td {
 .subsection-about {
   background-color: var(--color-dark-grey);
   padding: 0;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.37);
 }
 
 .title-subsection {
@@ -1384,13 +1464,35 @@ table td {
   width: 100%;
   padding: 5rem 0;
   min-height: 260px;
-  transition: 100ms ease-in;
+
+  transition: 100ms;
 }
 
 .box-subsection-about:hover {
-  transform: scale(1.07);
+  transform: scale(1.02);
 }
 
 .container-fluid {
   padding: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.text-welcome {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: white;
 }
